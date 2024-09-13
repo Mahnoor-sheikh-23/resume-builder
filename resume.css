@@ -1,0 +1,188 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #003366;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+.resume {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Profile Section */
+.profile-section {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.profile-picture {
+    width: 190px;
+    height: 190px;
+    border-radius: 50%;
+    border: 10px 1px 8px solid #002244;
+    object-fit: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.name {
+    margin: 10px 0;
+    color: #003366;
+}
+
+/* About Me Section */
+.about-me-section {
+    margin-bottom: 20px;
+}
+
+.about-me-section h2 {
+    color: #003366;
+}
+
+/* Education Section */
+.education-item {
+    background-color: #f4f4f4;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.education-item h3 {
+    margin-top: 0;
+}
+
+/* Skills Section */
+.skills-section {
+    margin-bottom: 20px;
+}
+
+.skills-section h2 {
+    color: #003366;
+}
+
+#editButton {
+    background-color: #002244;
+    padding: 16px;
+    color: white;
+    border-radius:15px ;
+    cursor: pointer;    
+    border: none;
+}
+#downloadButton{
+    background-color: #002244;
+    padding: 14px;
+    color: white;
+    border-radius:15px ;
+    cursor: pointer;
+    border: none;
+    margin-top: 20px;
+}
+.skills-list  {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.skills-list li {
+    background-color: #003366;
+    color: white;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+}
+
+/* Experience Section */
+.experience-section {
+    margin-bottom: 20px;
+}
+
+.experience-section h2 {
+    color: #003366;
+}
+
+/* Contact Section */
+.contact-section {
+    margin-bottom: 20px;
+}
+
+.contact-section h2 {
+    color: #003366;
+}
+
+/* Social Media Follow Section */
+.follow-section {
+    text-align: center;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    font-size: 35px;
+}
+
+.skills-section {
+    padding: 10px;
+    border-radius: 5px;
+    color: white; /* Ensure text is visible against the background */
+}
+.social-icon a i {
+    color: #003366;
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s ease;
+}
+
+.social-icon img:hover {
+    transform: scale(1.1);
+}
+
+#copyLinkButton{
+    margin-top: 20px;
+    background-color: #002244;
+    border: none;
+    border-radius: 15px;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+}
+
+
+/* resume.css */
+@media print {
+    @page {
+        margin: 0;
+    }
+    
+    body {
+        margin: 0;
+        background-color: white;
+    }
+
+    /* Ensure background colors are printed */
+    * {
+        -webkit-print-color-adjust: exact; /* For Chrome, Safari */
+        print-color-adjust: exact; /* For future compatibility with other browsers */
+    
+    }
+
+    /* Ensure the skills box is visible and includes the background color */
+    .skills-section {
+        
+        color: white; /* Ensure text contrast if needed */
+    }
+    
+    /* Hide unnecessary elements for print */
+    .edit-button {
+        display: none;
+    }
+}
+
