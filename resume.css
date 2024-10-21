@@ -1,13 +1,13 @@
-/* General Styles */
 body {
     font-family: Arial, sans-serif;
-    background-color: #003366;
+    background-color: gray; 
     margin: 0;
     padding: 0;
     color: #333;
 }
 
-.resume {
+.container {
+    display: flex; 
     max-width: 900px;
     margin: 20px auto;
     padding: 20px;
@@ -16,37 +16,65 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Profile Section */
+.sidebar {
+    width: 30%;
+    padding: 20px;
+    background-color: #002244; 
+    color: #fff;
+}
+
+
 .profile-section {
     text-align: center;
-    margin-bottom: 20px;
 }
 
 .profile-picture {
-    width: 190px;
-    height: 190px;
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
-    border: 10px 1px 8px solid #002244;
+    border: 5px solid #FFD700;
     object-fit: cover;
-    background-position: center;
-    background-repeat: no-repeat;
 }
 
 .name {
     margin: 10px 0;
+}
+
+
+.skills-section {
+    margin-top: 20px;
+}
+
+.skills-section h2 {
+    color: #FFD700;
+}
+
+.skills-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.skills-list li {
+    background-color: #FFD700; 
+    color: #003366; 
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+}
+
+
+.main-content {
+    width: 70%; 
+    padding: 20px;
+}
+
+
+h2 {
     color: #003366;
 }
 
-/* About Me Section */
-.about-me-section {
-    margin-bottom: 20px;
-}
 
-.about-me-section h2 {
-    color: #003366;
-}
-
-/* Education Section */
 .education-item {
     background-color: #f4f4f4;
     border: 1px solid #ddd;
@@ -55,99 +83,35 @@ body {
     margin-bottom: 20px;
 }
 
-.education-item h3 {
-    margin-top: 0;
-}
-
-/* Skills Section */
-.skills-section {
-    margin-bottom: 20px;
-}
-
-.skills-section h2 {
-    color: #003366;
-}
-
-#editButton {
-    background-color: #002244;
-    padding: 16px;
-    color: white;
-    border-radius:15px ;
-    cursor: pointer;    
-    border: none;
-}
-#downloadButton{
-    background-color: #002244;
-    padding: 14px;
-    color: white;
-    border-radius:15px ;
-    cursor: pointer;
-    border: none;
-    margin-top: 20px;
-}
-.skills-list  {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.skills-list li {
-    background-color: #003366;
-    color: white;
-    padding: 10px;
-    margin: 5px 0;
-    border-radius: 5px;
-}
-
-/* Experience Section */
 .experience-section {
     margin-bottom: 20px;
 }
 
-.experience-section h2 {
-    color: #003366;
+
+.edit-button {
+    text-align: center;
+    margin-top: 20px;
 }
 
-/* Contact Section */
-.contact-section {
-    margin-bottom: 20px;
+#editButton,
+#downloadButton {
+    background-color: #003366; 
+    padding: 14px;
+    color: #FFD700;
+    border-radius: 15px;
+    cursor: pointer;
+    border: none;
+    margin: 10px;
 }
 
-.contact-section h2 {
-    color: #003366;
-}
 
-/* Social Media Follow Section */
-.follow-section {
+#shareLinkContainer {
     text-align: center;
 }
 
-.social-icons {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    font-size: 35px;
-}
-
-.skills-section {
-    padding: 10px;
-    border-radius: 5px;
-    color: white; /* Ensure text is visible against the background */
-}
-.social-icon a i {
-    color: #003366;
-    width: 30px;
-    height: 30px;
-    transition: transform 0.3s ease;
-}
-
-.social-icon img:hover {
-    transform: scale(1.1);
-}
-
-#copyLinkButton{
+#copyLinkButton {
     margin-top: 20px;
-    background-color: #002244;
+    background-color: #003366;
     border: none;
     border-radius: 15px;
     color: white;
@@ -155,34 +119,49 @@ body {
     cursor: pointer;
 }
 
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; 
+    }
 
-/* resume.css */
+    .sidebar {
+        width: 100%; 
+        padding: 10px;
+    }
+
+    .main-content {
+        width: 100%; 
+        padding: 10px;
+    }
+}
+
+/* Print Styles */
 @media print {
     @page {
         margin: 0;
     }
-    
+
     body {
-        margin: 0;
-        background-color: white;
+        margin: 0; 
+        background-color: white; 
     }
 
-    /* Ensure background colors are printed */
+  
     * {
-        -webkit-print-color-adjust: exact; /* For Chrome, Safari */
-        print-color-adjust: exact; /* For future compatibility with other browsers */
-    
+        -webkit-print-color-adjust: exact; 
+        print-color-adjust: exact;
     }
 
-    /* Ensure the skills box is visible and includes the background color */
+   
     .skills-section {
-        
-        color: white; /* Ensure text contrast if needed */
+        color: #003366; 
     }
+
     
-    /* Hide unnecessary elements for print */
+    #editButton,
+    #downloadButton,
+    #shareLinkContainer,
     .edit-button {
-        display: none;
+        display: none; /
     }
 }
-

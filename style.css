@@ -1,6 +1,5 @@
 body {
     font-family: Arial, sans-serif;
-    /* background: linear-gradient(to right, #6a11cb, #2575fc); */
     background-color: #082860;
     display: flex;
     justify-content: center;
@@ -19,8 +18,9 @@ body {
     width: 700vw;
     max-width: 900px;  
     overflow-y: auto;
-    max-height: 100vh;
+    max-height: 100vh; 
     animation: fadeIn 1s ease-in-out;
+
 }
 
 h1, h2 {
@@ -59,7 +59,7 @@ textarea:focus {
 }
 
 button {
-    /* background-color: #6a11cb; */
+
     background-color: #082860;
     color: white;
     border: none;

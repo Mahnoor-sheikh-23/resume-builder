@@ -14,7 +14,7 @@ interface ResumeData {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    // Check if there is data in localStorage
+    
     const storedData = localStorage.getItem('resumeData');
     if (storedData) {
         const resumeData: ResumeData = JSON.parse(storedData);
@@ -33,12 +33,6 @@ document.addEventListener('DOMContentLoaded', () => {
         (document.getElementById('phone') as HTMLInputElement).value = resumeData.phone;
         (document.getElementById('location') as HTMLInputElement).value = resumeData.location;
     }});
-
-
-
-
-
-
 
 document.getElementById('resumeForm')?.addEventListener('submit', function (event) {
     event.preventDefault();

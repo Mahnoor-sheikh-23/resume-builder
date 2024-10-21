@@ -4,68 +4,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resume</title>
+    <title>Resume Builder</title>
     <link rel="stylesheet" href="resume.css">
 </head>
 
 <body>
-    <div class="resume" id="resumeContent"> <!-- Added id="resumeContent" -->
-        <!-- Profile Section -->
-        <div class="profile-section">
-            <h1 class="name" id="fullName"></h1>
-        </div>
-
-        <!-- About Me Section -->
-        <div class="about-me-section">
-            <h2>About Me</h2>
-            <p id="aboutMe"></p>
-        </div>
-
-        <section id="education">
-            <h2>Education</h2>
-            <div class="education-item">
-                <h3 id="degree"></h3>
-                <p><strong>Matriculation:</strong> <span id="matricSchool"></span></p>
-                <p><strong>Year:</strong> <span id="matricYear"></span></p>
-                <p><strong>Currently:</strong> <span id="currentEducation"></span></p>
-                <p><strong><span id="currentInstitute"></span></strong>, Karachi</p>
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="profile-section">
+                <h1 class="name" id="fullName">Your Name</h1>
+                <p id="location">Location</p>
+                <div class="contact-info">
+                    <p>Email: <span id="email">your.email@example.com</span></p>
+                    <p>Phone: <span id="phone">123-456-7890</span></p>
+                </div>
             </div>
-        </section>
 
-        <!-- Skills Section -->
-        <div class="skills-section">
-            <h2>Skills</h2>
-            <ul class="skills-list" id="skillsList"></ul>
-        </div>
+            <!-- Skills Section in Sidebar -->
+            <div class="skills-section">
+                <h2>Skills</h2>
+                <ul class="skills-list" id="skillsList">
+                    <li>Skill 1</li>
+                    <li>Skill 2</li>
+                    <li>Skill 3</li>
+                </ul>
+            </div>
+        </aside>
 
-        <!-- Experience Section -->
-        <div class="experience-section">
-            <h2>Experience</h2>
-            <p id="experience"></p>
-        </div>
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- About Me Section -->
+            <div class="about-me-section">
+                <h2>About Me</h2>
+                <p id="aboutMe">This is the about me section where you can add information about yourself.</p>
+            </div>
 
-        <!-- Contact Section -->
-        <div class="contact-section" id="contactSection">
-            <h2>Contact</h2>
-            <p>Email: <span id="email"></span></p>
-            <p>Phone: <span id="phone"></span></p>
-            <p>Location: <span id="location"></span></p>
-        </div>
-        <!-- Edit section  -->
-        <div class="edit-button">
-            <button id="editButton">Edit Resume</button>
-            <button id="downloadButton">Download Resume</button>
-        </div>
+            <!-- Education Section -->
+            <section id="education">
+                <h2>Education</h2>
+                <div class="education-item">
+                    <h3 id="degree">Degree Title</h3>
+                    <p><strong>Matriculation:</strong> <span id="matricSchool">Your School</span></p>
+                    <p><strong>Year:</strong> <span id="matricYear">Year</span></p>
+                    <p><strong>Currently:</strong> <span id="currentEducation">Current Studies</span></p>
+                    <p><strong><span id="currentInstitute">Current Institute</span></strong>, City</p>
+                </div>
+            </section>
 
-        <div id="shareLinkContainer">
-            <p>Share your resume using this link:</p>
-            <a id="sharableLink" href="#" target="_blank"></a>
-            <br/>
-            <button id="copyLinkButton">Copy Link</button>
-        </div>
+            <!-- Experience Section -->
+            <div class="experience-section">
+                <h2>Experience</h2>
+                <p id="experience">Your experience details go here.</p>
+            </div>
+
+            <!-- Edit and Download Section -->
+            <div class="edit-button">
+                <button id="editButton">Edit Resume</button>
+                <button id="downloadButton">Download Resume</button>
+            </div>
+
+            <!-- Share Link Section -->
+            <div id="shareLinkContainer">
+                <p>Share your resume using this link:</p>
+                <a id="sharableLink" href="#" target="_blank">Link</a>
+                <br />
+                <button id="copyLinkButton">Copy Link</button>
+            </div>
+        </main>
     </div>
 
-    <script src="resume.js"></script>
+    <script src="resume.js"></script> 
 </body>
 
 </html>
+

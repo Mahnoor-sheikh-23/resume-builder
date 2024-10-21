@@ -64,7 +64,7 @@ window.addEventListener('load', () => {
         const uniqueId = saveResumeData(resumeData);
         const sharableUrl = `${window.location.origin}${window.location.pathname}?id=${uniqueId}`;
         const shareLinkElement = document.getElementById('sharableLink') as HTMLAnchorElement;
-        shareLinkElement.innerText = sharableUrl;
+        shareLinkElement.innerText = "Link";
         shareLinkElement.href = sharableUrl;
 
         const copyButton = document.getElementById('copyLinkButton');
@@ -93,4 +93,5 @@ window.addEventListener('load', () => {
         });
     }
 });
+
 
