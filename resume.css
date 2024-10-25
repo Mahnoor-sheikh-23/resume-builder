@@ -1,9 +1,9 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: gray; 
     margin: 0;
     padding: 0;
     color: #333;
+    background-color: rgb(184, 233, 215);  
 }
 
 .container {
@@ -19,7 +19,7 @@ body {
 .sidebar {
     width: 30%;
     padding: 20px;
-    background-color: #002244; 
+    background-color:rgb(26, 81, 50) ; 
     color: #fff;
 }
 
@@ -32,7 +32,7 @@ body {
     width: 100px;
     height: 100px;
     border-radius: 50%;
-    border: 5px solid #FFD700;
+    border: 5px solid gray;
     object-fit: cover;
 }
 
@@ -46,7 +46,8 @@ body {
 }
 
 .skills-section h2 {
-    color: #FFD700;
+    color: white;
+    text-align: center;
 }
 
 .skills-list {
@@ -56,9 +57,10 @@ body {
 }
 
 .skills-list li {
-    background-color: #FFD700; 
-    color: #003366; 
+    background-color: rgb(120, 174, 143); 
+    color: white; 
     padding: 10px;
+    text-align: center;
     margin: 5px 0;
     border-radius: 5px;
 }
@@ -71,7 +73,7 @@ body {
 
 
 h2 {
-    color: #003366;
+    color:rgb(26, 81, 50) ; ;
 }
 
 
@@ -95,9 +97,9 @@ h2 {
 
 #editButton,
 #downloadButton {
-    background-color: #003366; 
+    background-color: rgb(26, 81, 50) ; 
     padding: 14px;
-    color: #FFD700;
+    color: white;
     border-radius: 15px;
     cursor: pointer;
     border: none;
@@ -111,7 +113,7 @@ h2 {
 
 #copyLinkButton {
     margin-top: 20px;
-    background-color: #003366;
+    background-color: rgb(26, 81, 50) ; 
     border: none;
     border-radius: 15px;
     color: white;
@@ -123,12 +125,12 @@ h2 {
     .container {
         flex-direction: column; 
     }
-
+    
     .sidebar {
         width: 100%; 
         padding: 10px;
+        border-radius: 1px;
     }
-
     .main-content {
         width: 100%; 
         padding: 10px;
